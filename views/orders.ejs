@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your Orders</title>
+</head>
+<body>
+  <h1>Your Orders</h1>
+
+  <% if (orders.length === 0) { %>
+    <p>You have not placed any orders yet.</p>
+  <% } else { %>
+    <% orders.forEach(order => { %>
+      <div style="border:1px solid #ccc; margin-bottom:10px; padding:10px;">
+        <h3>Order ID: <%= order._id %></h3>
+        <ul>
+          <% order.products.forEach(item => { %>
+            <li>
+              <%= item.quantity %> × <%= item.productId.name %>
+            </li>
+          <% }) %>
+        </ul>
+      </div>
+    <% }) %>
+  <% } %>
+
+  <p><a href="/products">Continue Shopping</a></p>
+</body>
+</html>
