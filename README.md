@@ -1,8 +1,5 @@
 # codealpha_tasks
 
-Of course! Here’s a **complete README.md** you can drop into your project root. It’s clear, professional, and covers all essentials for a cart-based e-commerce backend with Express and MongoDB:
-
----
 
 ```markdown
 # 🛒 E-commerce Cart Backend
@@ -113,19 +110,6 @@ npm start
 * Make sure your MongoDB database is running and accessible at the URI you provide in `.env`.
 * Always commit your `package.json` and `package-lock.json`, but **do not commit `node_modules/`** — keep it in `.gitignore`.
 
----
-
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
-
-## ✨ Author
-
-Developed by [Your Name](https://github.com/your-username).
-
-```
 
 ---
 
@@ -134,5 +118,4 @@ Developed by [Your Name](https://github.com/your-username).
 2. Replace `Your Name` and GitHub profile link in the Author section.  
 3. Add a `LICENSE` file if you want an open-source license (e.g., MIT, Apache).
 
-Would you like a `LICENSE` file template?
 ```
