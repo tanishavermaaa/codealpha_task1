@@ -29,12 +29,17 @@ backend/
 │ └── user.js
 ├── routes/
 │ ├── authRoutes.js
+│ ├── cartRoutes.js
 │ ├── mainRoute.js
 │ ├── orderRoute.js
 │ └── productRoute.js
 ├── views/
 │ ├── home.ejs
 │ ├── login.ejs
+│ ├── product.ejs
+│ ├── cart.ejs
+│ ├── orderConfirmation.ejs
+│ ├── productDetails.ejs
 │ ├── product.ejs
 │ └── register.ejs
 └── server.js
@@ -58,14 +63,11 @@ Visit app at [http://localhost:3000](http://localhost:3000).
 ---
 
 📌 Usage
+
 Visit /auth/register to create an account
-
 Login via /auth/login
-
 Browse products at /products
-
 View product details via /products/:id
-
 Place orders via /orders/place
 
 ---
