@@ -5,7 +5,7 @@ const router = express.Router();
 router.get('/', async (req, res) => {
   try {
     const products = await Product.find();
-    res.render('product', { products }); 
+    res.render('product', { products, query: req.query }); 
   } catch (err) {
     console.error('Error fetching products:', err);
     res.status(500).send('Failed to fetch products');

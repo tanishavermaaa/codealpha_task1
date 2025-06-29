@@ -1,8 +1,21 @@
-<h2>All Products</h2>
-<ul>
-  <% products.forEach(p => { %>
-    <li>
-      <a href="/products/<%= p._id %>"><%= p.name %></a> - ₹<%= p.price %>
-    </li>
-  <% }) %>
-</ul>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome to Our Store</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: linear-gradient(135deg, #007bff, #00c6ff); color: white; text-align: center; margin: 0; padding: 0; height: 100vh; display: flex; justify-content: center; align-items: center; }
+    .content { max-width: 600px; padding: 40px; background: rgba(0, 0, 0, 0.4); border-radius: 10px; }
+    h1 { font-size: 2.5em; margin-bottom: 20px; }
+    p { font-size: 1.2em; margin-bottom: 30px; }
+    a { display: inline-block; padding: 12px 20px; background: white; color: #007bff; text-decoration: none; border-radius: 5px; font-weight: bold; }
+    a:hover { background: #f0f0f0; }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <h1>Welcome to Our Store!</h1>
+    <p>Browse our amazing products and shop your favorites now.</p>
+    <a href="/products">Shop Now</a>
+  </div>
+</body>
+</html>

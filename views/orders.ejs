@@ -2,27 +2,34 @@
 <html>
 <head>
   <title>Your Orders</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 20px; }
+    .container { max-width: 800px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    h1 { text-align: center; color: #333; }
+    .order { border: 1px solid #ddd; border-radius: 5px; padding: 15px; margin-bottom: 20px; }
+    .order h3 { margin-top: 0; color: #007bff; }
+    .order ul { padding-left: 20px; }
+    .order ul li { margin: 5px 0; }
+  </style>
 </head>
 <body>
-  <h1>Your Orders</h1>
-
-  <% if (orders.length === 0) { %>
-    <p>You have not placed any orders yet.</p>
-  <% } else { %>
-    <% orders.forEach(order => { %>
-      <div style="border:1px solid #ccc; margin-bottom:10px; padding:10px;">
-        <h3>Order ID: <%= order._id %></h3>
-        <ul>
-          <% order.products.forEach(item => { %>
-            <li>
-              <%= item.quantity %> × <%= item.productId.name %>
-            </li>
-          <% }) %>
-        </ul>
-      </div>
-    <% }) %>
-  <% } %>
-
-  <p><a href="/products">Continue Shopping</a></p>
+  <div class="container">
+    <h1>Your Orders</h1>
+    <% if (orders.length === 0) { %>
+      <p>You have not placed any orders yet.</p>
+      <p><a href="/products">Continue Shopping</a></p>
+    <% } else { %>
+      <% orders.forEach(order => { %>
+        <div class="order">
+          <h3>Order ID: <%= order._id %></h3>
+          <ul>
+            <% order.products.forEach(item => { %>
+              <li><%= item.productId.name %> (x<%= item.quantity %>)</li>
+            <% }) %>
+          </ul>
+        </div>
+      <% }) %>
+    <% } %>
+  </div>
 </body>
 </html>
