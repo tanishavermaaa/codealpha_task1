@@ -18,6 +18,30 @@ This project is a simple e-commerce backend built with Node.js, Express, MongoDB
 
 ---
 
+backend/
+├── config/
+│ └── db.js
+├── middleware/
+│ └── authmiddleware.js
+├── models/
+│ ├── order.js
+│ ├── product.js
+│ └── user.js
+├── routes/
+│ ├── authRoutes.js
+│ ├── mainRoute.js
+│ ├── orderRoute.js
+│ └── productRoute.js
+├── views/
+│ ├── home.ejs
+│ ├── login.ejs
+│ ├── product.ejs
+│ └── register.ejs
+└── server.js
+.env
+
+---
+
 Visit app at [http://localhost:3000](http://localhost:3000).
 
 ---
@@ -33,6 +57,19 @@ Visit app at [http://localhost:3000](http://localhost:3000).
 
 ---
 
+📌 Usage
+Visit /auth/register to create an account
+
+Login via /auth/login
+
+Browse products at /products
+
+View product details via /products/:id
+
+Place orders via /orders/place
+
+---
+
 ## 🛠️ Technologies Used
 
 * **Node.js**
@@ -43,10 +80,3 @@ Visit app at [http://localhost:3000](http://localhost:3000).
 * **EJS** (for views)
 
 
-
-✅ **What to do next:**  
-1. Replace `https://github.com/your-username/your-repo.git` with your real GitHub repo URL.  
-2. Replace `Your Name` and GitHub profile link in the Author section.  
-3. Add a `LICENSE` file if you want an open-source license (e.g., MIT, Apache).
-
-```
